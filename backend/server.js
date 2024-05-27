@@ -15,6 +15,9 @@ connectDB();
 
 // console.log(process.env.PORT);
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api/auth", authRoutes);
 
 app.listen(port, () => {
