@@ -16,8 +16,8 @@ connectDB();
 
 // console.log(process.env.PORT);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //req.body
+app.use(express.urlencoded({ extended: true })); //form data
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
